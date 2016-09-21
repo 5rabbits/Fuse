@@ -494,7 +494,9 @@
   }
 
   function isArray (obj) {
-    return Object.prototype.toString.call(obj) === '[object Array]'
+    var type = Object.prototype.toString.call(obj)
+
+    return type === '[object Array]' || type === '[object Array Iterator]'
   }
 
   /**
